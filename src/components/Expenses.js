@@ -1,4 +1,4 @@
-import "./componentStyles/Expenses.css";
+import "./styles/Expenses.css";
 import ExpenseItem from "./ExpenseItem";
 
 function Expenses(props) {
