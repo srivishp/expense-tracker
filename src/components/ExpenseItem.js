@@ -10,11 +10,13 @@ const ExpenseItem = (props) => {
   // [title, setTitle] and used in the DOM to reflect changes on the UI.
   // Here, we are REGISTERING THE STATE "props.title" as the current value.
   const [title, setTitle] = useState(props.title);
-  const handleClick = () => {
-    setTitle("Barbie");
-    // Here, console log still shows the previous title, as it is not updated immediately
-    console.log(title);
-  };
+
+  //const handleClick = () => {
+  //setTitle("Barbie");
+  // Here, console log still shows the previous title, as it is not updated immediately
+  //console.log(title);
+  //};
+
   return (
     // Here, we are using a wrapper around other components of the UI. This is called composition.
     <CardWrapper className="expense-item">
@@ -27,7 +29,7 @@ const ExpenseItem = (props) => {
             Because, using () will call a function when the file is parsed for the first time
             when the app loads, and not when we click the button.
         */}
-        <button onClick={handleClick}>Test button</button>
+        {/* <button onClick={handleClick}>Test button</button> */}
       </div>
     </CardWrapper>
   );

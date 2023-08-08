@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses";
+import NewExpense from "./components/NewExpense";
 
 const App = () => {
   const expenses = [
@@ -28,9 +29,15 @@ const App = () => {
     },
   ];
 
+  // passing data from child component is called lifting the state up
+  const handleAddExpense = (expense) => {
+    console.log(expense);
+  };
+
   return (
     <div>
-      <h2>Let's get started!</h2>
+      {/* onAddExpense is set as props to get data from NewExpense, which is a child component */}
+      <NewExpense onAddExpense={handleAddExpense} />
       <Expenses items={expenses} />
     </div>
   );
