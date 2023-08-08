@@ -2,7 +2,7 @@ import "./styles/Expenses.css";
 import ExpenseItem from "./ExpenseItem";
 import CardWrapper from "./CardWrapper";
 
-function Expenses(props) {
+const Expenses = (props) => {
   return (
     <CardWrapper className="expenses">
       <ExpenseItem
@@ -30,6 +30,6 @@ function Expenses(props) {
       />
     </CardWrapper>
   );
-}
+};
 
 export default Expenses;

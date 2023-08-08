@@ -2,7 +2,7 @@ import "./styles/ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import CardWrapper from "./CardWrapper";
 
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
   return (
     // Here, we are using a wrapper around other components of the UI. This is called composition.
     <CardWrapper className="expense-item">
@@ -14,6 +14,6 @@ function ExpenseItem(props) {
       </div>
     </CardWrapper>
   );
-}
+};
 
 export default ExpenseItem;
