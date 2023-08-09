@@ -17,7 +17,7 @@ const ExpenseForm = (props) => {
   const handleTitleChange = (event) => {
     setEnteredTitle(event.target.value);
     // we can log the current value at each keystorke using event.target.value
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
 
   const handleAmountChange = (event) => {
@@ -86,6 +86,9 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button onClick={props.onCancel} type="button">
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
