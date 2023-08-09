@@ -1,4 +1,4 @@
-import "./styles/CardWrapper.css";
+import "../__styles/CardWrapper.css";
 
 const CardWrapper = (props) => {
   // Wrapper components will only allow props that you define, unlike standard HTML tags.

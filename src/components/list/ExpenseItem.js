@@ -1,7 +1,7 @@
 // useState is a React hook. It is a built in function that returns an array with two items,
 // [current value, function to change value].
 import { useState } from "react";
-import "./styles/ExpenseItem.css";
+import "../__styles/ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import CardWrapper from "./CardWrapper";
 
