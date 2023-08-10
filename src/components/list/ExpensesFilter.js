@@ -1,4 +1,4 @@
-import "./styles/ExpensesFilter.css";
+import "../__styles/ExpensesFilter.css";
 
 const ExpensesFilter = (props) => {
   const handleDropdown = (event) => {

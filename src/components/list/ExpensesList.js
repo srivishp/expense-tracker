@@ -1,5 +1,5 @@
 import ExpenseItem from "./ExpenseItem";
-import "./styles/ExpensesList.css";
+import "../__styles/ExpensesList.css";
 
 const ExpensesList = (props) => {
   // Using a map function to iterate for every set of data from an array or user inputs.

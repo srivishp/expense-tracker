@@ -1,8 +1,9 @@
 import { useState } from "react";
-import "./styles/Expenses.css";
+import "../__styles/Expenses.css";
 import CardWrapper from "./CardWrapper";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
+import ExpensesChart from "../chart/ExpensesChart";
 
 const Expenses = (props) => {
   const [year, setYear] = useState("2023");
@@ -18,13 +19,12 @@ const Expenses = (props) => {
   });
 
   return (
-    <li>
-      <CardWrapper className="expenses">
-        <ExpensesFilter selected={year} onYearChange={handleYearChange} />
-        {/* Created separate ExpenseList component to cleanup this file */}
-        <ExpensesList items={filteredExpenses} />
-      </CardWrapper>
-    </li>
+    <CardWrapper className="expenses">
+      <ExpensesFilter selected={year} onYearChange={handleYearChange} />
+      {/* Created separate ExpenseList component to cleanup this file */}
+      <ExpensesChart expenses={filteredExpenses} />
+      <ExpensesList items={filteredExpenses} />
+    </CardWrapper>
   );
 };
 

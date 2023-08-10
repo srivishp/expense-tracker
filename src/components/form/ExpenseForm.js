@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./styles/ExpenseForm.css";
+import "../__styles/ExpenseForm.css";
 
 // We are adding props here because we want to send data from this component to other/parent components.
 const ExpenseForm = (props) => {
@@ -38,7 +38,7 @@ const ExpenseForm = (props) => {
     // using built in Date function to display a readable date
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount, //+ is added to enforce the amount as number and not a string
       date: new Date(enteredDate),
     };
 
