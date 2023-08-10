@@ -38,7 +38,7 @@ const ExpenseForm = (props) => {
     // using built in Date function to display a readable date
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount, //+ is added to enforce the amount as number and not a string
       date: new Date(enteredDate),
     };
 

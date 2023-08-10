@@ -3,6 +3,7 @@ import "../__styles/Expenses.css";
 import CardWrapper from "./CardWrapper";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
+import ExpensesChart from "../chart/ExpensesChart";
 
 const Expenses = (props) => {
   const [year, setYear] = useState("2023");
@@ -21,6 +22,7 @@ const Expenses = (props) => {
     <CardWrapper className="expenses">
       <ExpensesFilter selected={year} onYearChange={handleYearChange} />
       {/* Created separate ExpenseList component to cleanup this file */}
+      <ExpensesChart expenses={filteredExpenses} />
       <ExpensesList items={filteredExpenses} />
     </CardWrapper>
   );
